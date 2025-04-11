@@ -34,20 +34,20 @@ const Navbar = () => {
                 Home
               </Link>
 
-              <Link
+              {/* <Link
                 to="/register-doctor"
                 className={`text-white px-3 py-2 rounded-md text-sm font-medium ${isActive(
                   "/register-doctor"
                 )}`}
               >
                 Register Doctor
-              </Link>
+              </Link> */}
 
               {isPatient && (
                 <Link
-                  to="/patient-dashboard"
+                  to="/records"
                   className={`text-white px-3 py-2 rounded-md text-sm font-medium ${isActive(
-                    "/patient-dashboard"
+                    "/records"
                   )}`}
                 >
                   My Records

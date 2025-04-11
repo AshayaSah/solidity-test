@@ -16,6 +16,8 @@ import Home from "./pages/Home";
 import Register from "./components/Register";
 import AddRecord from "./components/AddRecord";
 import RegisterDoctor from "./components/RegisterDoctor";
+import AiConsultation from "./components/AiConsultantation";
+import PatientRecordsViewer from "./components/PatientRecordsViewer";
 // import ViewRecord from "./components/ViewRecord";
 // import AIAssistant from "./components/AIAssistant";
 
@@ -30,13 +32,14 @@ function App() {
           <Route path="/register-doctor" element={<RegisterDoctor />} />
           <Route path="/register" element={<Register />} />
           <Route path="/add-record" element={<AddRecord />} />
+          <Route path="/records" element={<PatientRecordsViewer />} />
           {/* <Route
                   path="/patient-dashboard"
                   element={<PatientDashboard />}
                 />
                 <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
-                <Route path="/view-record/:id" element={<ViewRecord />} />
-                <Route path="/ai-assistant" element={<AIAssistant />} /> */}
+                <Route path="/view-record/:id" element={<ViewRecord />} />*/}
+          <Route path="/ai-assistant" element={<AiConsultation />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
