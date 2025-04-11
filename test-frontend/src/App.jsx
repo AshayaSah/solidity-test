@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 // import DoctorDashboard from "./components/DoctorDashboard";
 import Register from "./components/Register";
 import AddRecord from "./components/AddRecord";
+import RegisterDoctor from "./components/RegisterDoctor";
 // import ViewRecord from "./components/ViewRecord";
 // import AIAssistant from "./components/AIAssistant";
 
@@ -26,6 +27,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/register-doctor" element={<RegisterDoctor />} />
           <Route path="/register" element={<Register />} />
           <Route path="/add-record" element={<AddRecord />} />
           {/* <Route

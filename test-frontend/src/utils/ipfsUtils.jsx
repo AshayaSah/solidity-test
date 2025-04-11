@@ -1,5 +1,6 @@
 // src/utils/ipfsUtils.js
 import { create } from "ipfs-http-client";
+import { Buffer } from "buffer";
 
 // Connect to local IPFS node or Infura IPFS
 const ipfs = create({
@@ -25,6 +26,7 @@ export const uploadToIPFS = async (encryptedData) => {
 
     // Add data to IPFS
     const result = await ipfs.add(buffer);
+    console.log(result);
     return result.path; // This is the IPFS hash (CID)
   } catch (error) {
     console.error("Error uploading to IPFS:", error);

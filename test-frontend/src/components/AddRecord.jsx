@@ -5,14 +5,13 @@ import { encryptFile } from "../utils/encryptionUtils";
 import { uploadToIPFS } from "../utils/ipfsUtils";
 
 const AddRecord = () => {
-  const [patientAddress, setPatientAddress] = useState("");
+  const { currentAccount, medicalRecordsContract, isDoctor } = useWeb3();
+  const [patientAddress, setPatientAddress] = useState(currentAccount);
   const [recordType, setRecordType] = useState("");
   const [doctorName, setDoctorName] = useState("");
   const [fileContent, setFileContent] = useState(null);
   const [metadata, setMetadata] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { currentAccount, medicalRecordsContract, isDoctor } = useWeb3();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -96,7 +95,7 @@ const AddRecord = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl p-8 border border-gray-200 rounded-lg shadow-lg bg-white">
+    <div className="w-full mx-auto mt-4 max-w-2xl p-8 border border-gray-200 rounded-lg shadow-lg bg-white">
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-center text-gray-800">
           Add Medical Record
